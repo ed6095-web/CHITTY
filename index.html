@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHITTY - Virtual Assistant (Gemini)</title>
+  <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="main">
+    <div class="image-container">
+      <div class="image">
+        <img src="giphy.gif" alt="Virtual Assistant Animation" />
+      </div>
+      <h1>C H I T T Y</h1>
+      <p>I am an advanced Virtual Assistant. How may I help you?</p>
+    </div>
+    <div class="input">
+      <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+      <span class="content">Click the mic & speak!</span>
+    </div>
+    <form id="chat-form" autocomplete="off">
+      <input type="text" id="chat-input" placeholder="Type your message here..." />
+      <button type="submit" id="chat-submit"><i class="fas fa-paper-plane"></i></button>
+    </form>
+    <div id="chat-log"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

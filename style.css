@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto Mono', monospace; }
+
+body {
+  background: #000;
+  min-height: 100vh;
+  width: 100vw;
+}
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 28px;
+}
+.image-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image img {
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00bcd4, 0 0 40px #0ff5;
+}
+.image-container h1 {
+  color: #00bcd4;
+  text-align: center;
+  margin-bottom: 6px;
+  font-size: 28px;
+  letter-spacing: 9px;
+  font-weight: 700;
+  text-shadow: 0 0 8px #03f7f7;
+}
+.image-container p {
+  color: #1de9b6;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  filter: brightness(120%);
+  text-shadow: 0 0 3px #005;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  max-width: 98vw;
+  height: 38px;
+  border-radius: 18px;
+  background: rgba(202, 253, 255, 0.12);
+  box-shadow: 0 0 12px #00bcd466;
+  margin: 0 auto 10px auto;
+}
+.talk {
+  background: transparent;
+  border: none;
+  width: 38px;
+  height: 38px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.25s;
+}
+.talk:active, .talk:hover {
+  background: #00bcd4;
+}
+.talk i {
+  font-size: 17px;
+  color: #00e0ff;
+  filter: drop-shadow(0 0 3px #00bcd4);
+}
+.content {
+  color: #00e0ff;
+  font-size: 12px;
+  margin-left: 12px;
+  margin-right: 8px;
+  letter-spacing: 1px;
+  transition: color 0.16s;
+}
+
+#chat-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 350px;
+  margin: 0 auto 10px auto;
+  gap: 0;
+}
+#chat-input {
+  flex: 1 1 auto;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 16px 0 0 16px;
+  outline: none;
+  font-size: 13px;
+  background: #081c1d;
+  color: #03faff;
+}
+#chat-submit {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  background: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.18s;
+}
+#chat-submit:hover,
+#chat-submit:active {
+  background: #1de9b6;
+}
+#chat-submit i {
+  pointer-events: none;
+}
+
+#chat-log {
+  background: #111;
+  margin: 10px auto 0 auto;
+  min-height: 35px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-family: 'Roboto Mono', monospace;
+  color: #03faff;
+  font-size: 11px;
+  word-break: break-word;
+  line-height: 1.45;
+  box-shadow: 0 0 7px #00b0d355;
+  width: 90%;
+  max-width: 350px;
+}
+
+/* --- Mobile Responsive --- */
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 10px;
+  }
+  .image img {
+    width: 90px;
+    box-shadow: 0 0 10px #00bcd4, 0 0 20px #0ff5;
+  }
+  .image-container h1 {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 4px;
+  }
+  .image-container p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .input {
+    width: 98vw;
+    max-width: 220px;
+    height: 30px;
+    border-radius: 13px;
+  }
+  .talk {
+    width: 30px;
+    height: 30px;
+  }
+  .talk i {
+    font-size: 12px;
+  }
+  .content {
+    font-size: 10px;
+    margin-left: 6px;
+    margin-right: 2px;
+  }
+  #chat-form, #chat-log {
+    font-size: 9px;
+    min-height: 20px;
+    padding: 4px 4px;
+    width: 97vw;
+    max-width: 98vw;
+  }
+  #chat-input { font-size: 11px;}
+}
